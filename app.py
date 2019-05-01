@@ -32,7 +32,7 @@ def checkout():
 
 @app.route("/checkout_confirm")
 def checkout_confirm():
-    return "checkout_confirm"
+    return render_template("checkout_confirm.html")
 
 
 @app.route("/invoice")
