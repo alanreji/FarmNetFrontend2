@@ -52,7 +52,7 @@ def item():
 
 @app.route("/contact")
 def contact():
-    return "contact"
+    return render_template("contact.html")
 
 
 if __name__ == '__main__':
