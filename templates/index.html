@@ -10,12 +10,12 @@
 
     <!-- CSS
 ================================================== -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main-color.css" id="colors">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main-color.css') }}" id="colors">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/site.webmanifest') }}">
 </head>
 
 <body class="transparent-header">
@@ -36,7 +36,7 @@
 
                         <!-- Logo -->
                         <div id="logo">
-                            <a href="index-2.html"><img src="images/logo2.png" data-sticky-logo="images/logo.png" alt=""></a>
+                            <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo2.png') }}" data-sticky-logo="{{ url_for('static', filename='images/logo.png') }}" alt=""></a>
                         </div>
 
                         <!-- Mobile Navigation -->
@@ -68,14 +68,14 @@
                                 <ul id="responsive">
                                     <li><a href="#">Hi, User</a>
                                         <ul>
-                                            <li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Orders</a></li>
-                                            <li><a href="dashboard-my-profile.html"><i class="sl sl-icon-settings"></i> Account</a></li>
-                                            <li><a href="index-2.html"><i class="sl sl-icon-power"></i> Logout</a></li>
+                                            <li><a href="{{ url_for('orders') }}"><i class="fa fa-calendar-check-o"></i> Orders</a></li>
+                                            <li><a href="{{ url_for('account') }}"><i class="sl sl-icon-settings"></i> Account</a></li>
+                                            <li><a href="{{ url_for('logout') }}"><i class="sl sl-icon-power"></i> Logout</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </nav>
-                            <a href="pages-booking.html" class="button border with-icon">Cart <i class="sl sl-icon-basket"></i></a>
+                            <a href="{{ url_for('checkout') }}" class="button border with-icon">Cart <i class="sl sl-icon-basket"></i></a>
                         </div>
                     </div>
                     <!-- Right Side Content / End -->
@@ -192,10 +192,11 @@
         <div class="clearfix"></div>
         <!-- Header Container / End -->
 
+        {% block content %}
 
-        <!-- Banner
+            <!-- Banner
 ================================================== -->
-        <div class="main-search-container centered" data-background-image="images/main-search-background-01.jpg">
+        <div class="main-search-container centered" data-background-image="{{ url_for('static', filename='images/main-search-background-01.jpg') }}">
             <div class="main-search-inner">
 
                 <div class="container">
@@ -206,7 +207,7 @@
                                 <!-- Typed words can be configured in script settings at the bottom of this HTML file -->
                                 <span class="typed-words"></span>
                             </h2>
-                            <h4>Expolore top-rated farms, diaries and more</h4>
+                            <h4>Explore top-rated farms, diaries and more</h4>
 
                             <div class="main-search-input">
 
@@ -223,7 +224,7 @@
 
                                 <div class="main-search-input-item">
                                     <select data-placeholder="All Categories" class="chosen-select">
-								<option>All Categories</option>	
+								<option>All Categories</option>
 								<option>Farms</option>
 								<option>Diaries</option>
 								<option>Vegitables</option>
@@ -232,7 +233,7 @@
 							</select>
                                 </div>
 
-                                <button class="button" onclick="window.location.href='listings-half-screen-map-grid-1.html'">Find Food</button>
+                                <button class="button" onclick="window.location.href='{{ url_for('listing') }}'">Find Food</button>
 
                             </div>
                         </div>
@@ -326,9 +327,9 @@
 
                             <!-- Listing Item -->
                             <div class="carousel-item">
-                                <a href="listings-single-page-2.html" class="listing-item-container">
+                                <a href="{{ url_for('item') }}" class="listing-item-container">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-01.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-01.jpg') }}" alt="">
 
                                         <div class="listing-badge now-open">Verified</div>
 
@@ -348,9 +349,9 @@
 
                             <!-- Listing Item -->
                             <div class="carousel-item">
-                                <a href="listings-single-page-2.html" class="listing-item-container">
+                                <a href="{{ url_for('item') }}" class="listing-item-container">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-02.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-02.jpg') }}" alt="">
 
                                         <div class="listing-item-content">
                                             <span class="tag">CHICKEN</span>
@@ -368,9 +369,9 @@
 
                             <!-- Listing Item -->
                             <div class="carousel-item">
-                                <a href="listings-single-page-2.html" class="listing-item-container">
+                                <a href="{{ url_for('item') }}" class="listing-item-container">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-03.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-03.jpg') }}" alt="">
 
                                         <div class="listing-item-content">
                                             <span class="tag">Vegitables</span>
@@ -388,9 +389,9 @@
 
                             <!-- Listing Item -->
                             <div class="carousel-item">
-                                <a href="listings-single-page-2.html" class="listing-item-container">
+                                <a href="{{ url_for('item') }}" class="listing-item-container">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-04.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-04.jpg') }}" alt="">
 
                                         <div class="listing-badge now-open">Verified</div>
 
@@ -410,9 +411,9 @@
 
                             <!-- Listing Item -->
                             <div class="carousel-item">
-                                <a href="listings-single-page-2.html" class="listing-item-container">
+                                <a href="{{ url_for('item') }}" class="listing-item-container">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-05.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-05.jpg') }}" alt="">
                                         <div class="listing-item-content">
                                             <span class="tag">Tomatoes</span>
                                             <h3>Airport</h3>
@@ -429,9 +430,9 @@
 
                             <!-- Listing Item -->
                             <div class="carousel-item">
-                                <a href="listings-single-page-2.html" class="listing-item-container">
+                                <a href="{{ url_for('item') }}" class="listing-item-container">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-06.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-06.jpg') }}" alt="">
 
                                         <div class="listing-badge now-closed">Not Verified</div>
 
@@ -485,7 +486,7 @@
                                 user generated content.</div>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images/happy-client-01.jpg" alt="">
+                            <img src="{{ url_for('static', filename='images/happy-client-01.jpg') }}" alt="">
                             <h4>Aiju T Biju<span>Coffee Shop Owner</span></h4>
                         </div>
                     </div>
@@ -496,8 +497,8 @@
                                 user generated content.</div>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images/happy-client-01.jpg" alt="">
-                            <h4>Alen Reji<span>Coffee Shop Owner</span></h4>
+                            <img src="{{ url_for('static', filename='images/happy-client-01.jpg') }}" alt="">
+                            <h4>Alan Reji<span>Coffee Shop Owner</span></h4>
                         </div>
                     </div>
 
@@ -508,7 +509,7 @@
                                 the loop.</div>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images/happy-client-02.jpg" alt="">
+                            <img src="{{ url_for('static', filename='images/happy-client-02.jpg') }}" alt="">
                             <h4>Ajesh Darji<span>Clothing Store Owner</span></h4>
                         </div>
                     </div>
@@ -520,7 +521,7 @@
                                 world view.</div>
                         </div>
                         <div class="testimonial-author">
-                            <img src="images/happy-client-03.jpg" alt="">
+                            <img src="{{ url_for('static', filename='images/happy-client-03.jpg') }}" alt="">
                             <h4>Leo Cherian Jacob<span>Restaurant Owner</span></h4>
                         </div>
                     </div>
@@ -531,6 +532,9 @@
 
         </section>
 
+
+        {% endblock %}
+
         <!-- Footer
 ================================================== -->
         <div id="footer" class="dark">
@@ -538,7 +542,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 col-sm-6">
-                        <img class="footer-logo" src="images/logo2.png" alt="">
+                        <img class="footer-logo" src="{{ url_for('static', filename='images/logo2.png') }}" alt="">
                         <br><br>
                         <p>We enable farmers to get a better price for their crops by trading it directly to the consumer. Farmers can prove the quality of their products to consumers. The consumers will be able to get fresh crops directly from the genuine
                             farmers. The government can provide Loans and other benefits to genuine farmers without going into the wrong hands.
@@ -558,7 +562,7 @@
                         <ul class="footer-links">
                             <li><a href="#">How It Works</a></li>
                             <li><a href="#">FarmNet API</a></li>
-                            <li><a href="pages-contact.html">Contact</a></li>
+                            <li><a href="{{ url_for('contact') }}">Contact</a></li>
                         </ul>
                         <div class="clearfix"></div>
                     </div>
@@ -607,18 +611,19 @@
 
     <!-- Scripts
 ================================================== -->
-    <script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="scripts/mmenu.min.js"></script>
-    <script type="text/javascript" src="scripts/chosen.min.js"></script>
-    <script type="text/javascript" src="scripts/slick.min.js"></script>
-    <script type="text/javascript" src="scripts/rangeslider.min.js"></script>
-    <script type="text/javascript" src="scripts/magnific-popup.min.js"></script>
-    <script type="text/javascript" src="scripts/waypoints.min.js"></script>
-    <script type="text/javascript" src="scripts/counterup.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="scripts/tooltips.min.js"></script>
-    <script type="text/javascript" src="scripts/custom.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-2.2.0.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/mmenu.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/chosen.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/slick.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/rangeslider.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/magnific-popup.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/waypoints.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/counterup.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/tooltips.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/custom.js') }}"></script>
 
+    {% block addonScripts %}
 
     <!-- Google Autocomplete -->
     <script>
@@ -645,7 +650,7 @@
 
 
     <!-- Typed Script -->
-    <script type="text/javascript" src="scripts/typed.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/typed.js') }}"></script>
     <script>
         var typed = new Typed('.typed-words', {
             strings: ["Nearby Farmers", " Fresh Vegitables", " Fresh Fruits"],
@@ -657,6 +662,8 @@
             showCursor: true
         });
     </script>
+
+    {% endblock %}
 
 </body>
 
