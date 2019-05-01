@@ -170,9 +170,9 @@
 
                             <!-- Listing Item -->
                             <div class="col-lg-6 col-md-12">
-                                <a href="item.html" class="listing-item-container" data-marker-id="1">
+                                <a href="{{ url_for('item') }}" class="listing-item-container" data-marker-id="1">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-01.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-01.jpg') }}" alt="">
 
                                         <div class="listing-badge now-open">Verified</div>
 
@@ -192,9 +192,9 @@
 
                             <!-- Listing Item -->
                             <div class="col-lg-6 col-md-12">
-                                <a href="item.html" class="listing-item-container" data-marker-id="2">
+                                <a href="{{ url_for('item') }}" class="listing-item-container" data-marker-id="2">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-02.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-02.jpg') }}" alt="">
                                         <div class="listing-item-content">
                                             <span class="tag">CHICKEN</span>
                                             <h3>Poultry Farm</h3>
@@ -211,9 +211,9 @@
 
                             <!-- Listing Item -->
                             <div class="col-lg-6 col-md-12">
-                                <a href="item.html" class="listing-item-container" data-marker-id="3">
+                                <a href="{{ url_for('item') }}" class="listing-item-container" data-marker-id="3">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-03.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-03.jpg') }}" alt="">
 
                                         <div class="listing-item-content">
                                             <span class="tag">CARROT</span>
@@ -231,9 +231,9 @@
 
                             <!-- Listing Item -->
                             <div class="col-lg-6 col-md-12">
-                                <a href="item.html" class="listing-item-container" data-marker-id="4">
+                                <a href="{{ url_for('item') }}" class="listing-item-container" data-marker-id="4">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-04.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-04.jpg') }}" alt="">
 
                                         <div class="listing-badge now-open">Verified</div>
 
@@ -253,9 +253,9 @@
 
                             <!-- Listing Item -->
                             <div class="col-lg-6 col-md-12">
-                                <a href="item.html" class="listing-item-container" data-marker-id="5">
+                                <a href="{{ url_for('item') }}" class="listing-item-container" data-marker-id="5">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-05.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-05.jpg') }}" alt="">
                                         <div class="listing-item-content">
                                             <span class="tag">TOMATO</span>
                                             <h3>Issac's Tomatoes</h3>
@@ -272,9 +272,9 @@
 
                             <!-- Listing Item -->
                             <div class="col-lg-6 col-md-12">
-                                <a href="item.html" class="listing-item-container" data-marker-id="6">
+                                <a href="{{ url_for('item') }}" class="listing-item-container" data-marker-id="6">
                                     <div class="listing-item">
-                                        <img src="images/listing-item-06.jpg" alt="">
+                                        <img src="{{ url_for('static', filename='images/listing-item-06.jpg') }}" alt="">
 
                                         <div class="listing-badge now-closed">Not Verified</div>
 
@@ -352,19 +352,6 @@
     {% block footer %}
     {% endblock %}
 
-    <!-- Scripts
-================================================== -->
-    <script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="scripts/mmenu.min.js"></script>
-    <script type="text/javascript" src="scripts/chosen.min.js"></script>
-    <script type="text/javascript" src="scripts/slick.min.js"></script>
-    <script type="text/javascript" src="scripts/rangeslider.min.js"></script>
-    <script type="text/javascript" src="scripts/magnific-popup.min.js"></script>
-    <script type="text/javascript" src="scripts/waypoints.min.js"></script>
-    <script type="text/javascript" src="scripts/counterup.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="scripts/tooltips.min.js"></script>
-    <script type="text/javascript" src="scripts/custom.js"></script>
 
     {% block addonScripts %}
 
