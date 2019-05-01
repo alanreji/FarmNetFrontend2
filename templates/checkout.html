@@ -1,0 +1,154 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<!-- Titlebar
+================================================== -->
+<div id="titlebar">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<h2>Checkout</h2>
+
+				<!-- Breadcrumbs -->
+				<nav id="breadcrumbs">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>Checkout</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Content
+================================================== -->
+
+<!-- Container -->
+<div class="container">
+	<div class="row">
+
+		<!-- Content
+		================================================== -->
+		<div class="col-lg-8 col-md-8 padding-right-30">
+
+			<h3 class="margin-top-0 margin-bottom-30">Personal Details</h3>
+
+			<div class="row">
+
+				<div class="col-md-6">
+					<label>First Name</label>
+					<input type="text" value="">
+				</div>
+
+				<div class="col-md-6">
+					<label>Last Name</label>
+					<input type="text" value="">
+				</div>
+
+				<div class="col-md-6">
+					<div class="input-with-icon medium-icons">
+						<label>E-Mail Address</label>
+						<input type="text" value="">
+						<i class="im im-icon-Mail"></i>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="input-with-icon medium-icons">
+						<label>Phone</label>
+						<input type="text" value="">
+						<i class="im im-icon-Phone-2"></i>
+					</div>
+				</div>
+
+			</div>
+
+
+			<h3 class="margin-top-55 margin-bottom-30">Payment Method</h3>
+
+			<!-- Payment Methods Accordion -->
+			<div class="payment">
+
+				<div class="payment-tab payment-tab-active">
+					<div class="payment-tab-trigger">
+						<input checked id="paypal" name="cardType" type="radio" value="paypal">
+						<label for="paypal">Cash on Delivery(COD)</label>
+					</div>
+
+					<div class="payment-tab-content">
+						<p>FarmNet's Cash on Delivery option allows you to pay order value at the time of delivery.</p>
+					</div>
+				</div>
+			</div>
+			<!-- Payment Methods Accordion / End -->
+		
+			<a href="pages-booking-confirmation.html" class="button booking-confirmation-btn margin-top-40 margin-bottom-65">Confirm Order</a>
+		</div>
+
+
+		<!-- Sidebar
+		================================================== -->
+		<div class="col-lg-4 col-md-4 margin-top-0 margin-bottom-60">
+			<!-- Book Now -->
+			<div class="boxed-widget booking-widget  opening-hours summary margin-top-35">
+					<h3><i class="fa fa-calendar-check-o "></i>Your Order Form</h3>
+					<div class="row with-forms  margin-top-0">
+
+						<!-- Panel Dropdown -->
+				
+							<div>
+									<a class="total-costs">Total Quantity<span class="qtyTotal" name="qtyTotal">1</span></a>
+								<div>
+											<ul>
+												<li>Item<span>Carrot</span></li>
+												<li>Cost<span>INR 200</span></li>
+												<li>From<span>Farmer Name</span></li>
+											</ul>
+											<div class="qtyButtons">
+													<div class="qtyTitle">Quantity</div>
+													<input type="text" name="qtyInput" value="1">
+												</div>
+											<ul><li class="total-costs"></li></ul>
+									<!-- Quantity Buttons -->
+									<ul>
+											<li>Item<span>Carrot</span></li>
+											<li>Cost<span>INR 100</span></li>
+											<li>From<span>Farmer Name</span></li>
+										</ul>
+										<div class="qtyButtons">
+												<div class="qtyTitle">Quantity</div>
+												<input type="text" name="qtyInput" value="1">
+											</div>
+									<!-- Quantity Buttons -->
+						           <ul><li class="total-costs">Total Cost <span>INR 300.00</span></li></ul>
+								</div>
+							</div>
+
+						<!-- Panel Dropdown / End -->
+	
+					</div>
+					</div>
+					<!-- Book Now -->
+
+		</div>
+
+	</div>
+</div>
+<!-- Container / End -->
+
+{% endblock %}
+
+{% block addonScripts %}
+
+<!-- Booking Widget - Quantity Buttons -->
+<script src="{{ url_for('static', filename='scripts/quantityButtons.js') }}"></script>
+
+{% endblock %}
+
+</body>
+</html>
