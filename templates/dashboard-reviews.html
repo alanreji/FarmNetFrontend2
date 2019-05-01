@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<head>
+
+    <!-- Basic Page Needs
+================================================== -->
+    <title>FarmNet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+================================================== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main-color.css" id="colors">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header Container
+================================================== -->
+        <header id="header-container" class="fixed fullwidth dashboard">
+
+            <!-- Header -->
+            <div id="header" class="not-sticky">
+                <div class="container">
+
+                    <!-- Left Side Content -->
+                    <div class="left-side">
+
+                        <!-- Logo -->
+                        <div id="logo">
+                            <a href="index-2.html"><img src="images/logo.png" alt=""></a>
+                            <a href="index-2.html" class="dashboard-logo"><img src="images/logo2.png" alt=""></a>
+                        </div>
+
+                        <!-- Mobile Navigation -->
+                        <div class="mmenu-trigger">
+                            <button class="hamburger hamburger--collapse" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+                        </div>
+
+                        <!-- Main Navigation -->
+
+                        <div class="clearfix"></div>
+                        <!-- Main Navigation / End -->
+
+                    </div>
+                    <!-- Left Side Content / End -->
+
+                    <!-- Right Side Content / End -->
+                    <div class="right-side">
+                        <div>
+
+
+                            <a href="#sign-in-dialog" class="button border popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
+                            <nav id="navigation" class="style-1">
+                                <ul id="responsive">
+                                    <li><a href="#">Hi, User</a>
+                                        <ul>
+                                            <li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Orders</a></li>
+                                            <li><a href="dashboard-my-profile.html"><i class="sl sl-icon-settings"></i> Account</a></li>
+                                            <li><a href="index-2.html"><i class="sl sl-icon-power"></i> Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <a href="pages-booking.html" class="button border with-icon">Cart <i class="sl sl-icon-basket"></i></a>
+                        </div>
+                    </div>
+                    <!-- Right Side Content / End -->
+
+                </div>
+            </div>
+            <!-- Header / End -->
+
+        </header>
+        <div class="clearfix"></div>
+        <!-- Header Container / End -->
+
+
+        <!-- Dashboard -->
+        <div id="dashboard">
+
+            <!-- Navigation
+	================================================== -->
+
+            <!-- Responsive Navigation Trigger -->
+            <a href="#" class="dashboard-responsive-nav-trigger"><i class="fa fa-reorder"></i> Dashboard Navigation</a>
+
+            <div class="dashboard-nav">
+                <div class="dashboard-nav-inner">
+
+                    <ul data-submenu-title="Main">
+                        <li><a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Orders</a></li>
+                    </ul>
+
+                    <ul data-submenu-title="Listings">
+                        <li class="active"><a href="dashboard-reviews.html"><i class="sl sl-icon-star"></i> Reviews</a></li>
+                        <li><a href="dashboard-bookmarks.html"><i class="sl sl-icon-heart"></i> Bookmarks</a></li>
+                    </ul>
+
+                    <ul data-submenu-title="Account">
+                        <li><a href="dashboard-my-profile.html"><i class="sl sl-icon-user"></i> My Profile</a></li>
+                        <li><a href="index-2.html"><i class="sl sl-icon-power"></i> Logout</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- Navigation / End -->
+
+
+
+            <!-- Content
+	================================================== -->
+            <div class="dashboard-content">
+
+                <!-- Titlebar -->
+                <div id="titlebar">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Reviews</h2>
+                            <!-- Breadcrumbs -->
+                            <nav id="breadcrumbs">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li>Reviews</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="dashboard-list-box margin-top-0">
+                            <!-- Add Review Box -->
+                            <div id="add-review" class="add-review-box zoom-anim-dialog mfp-hide">
+
+                                <!-- Add Review -->
+                                <h3 class="listing-desc-headline margin-bottom-10">Add Review</h3>
+                                <p class="comment-notes">Your email address will not be published.</p>
+
+                                <!-- Subratings Container -->
+                                <div class="sub-ratings-container">
+
+                                    <!-- Subrating #1 -->
+                                    <div class="add-sub-rating">
+                                        <div class="sub-rating-title">Service <i class="tip" data-tip-content="Quality of customer service and attitude to work with you"></i></div>
+                                        <div class="sub-rating-stars">
+                                            <!-- Leave Rating -->
+                                            <div class="clearfix"></div>
+                                            <form class="leave-rating">
+                                                <input type="radio" name="rating" id="rating-1" value="1" />
+                                                <label for="rating-1" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-2" value="2" />
+                                                <label for="rating-2" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-3" value="3" />
+                                                <label for="rating-3" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-4" value="4" />
+                                                <label for="rating-4" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-5" value="5" />
+                                                <label for="rating-5" class="fa fa-star"></label>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <!-- Subrating #2 -->
+                                    <div class="add-sub-rating">
+                                        <div class="sub-rating-title">Value for Money <i class="tip" data-tip-content="Overall experience received for the amount spent"></i></div>
+                                        <div class="sub-rating-stars">
+                                            <!-- Leave Rating -->
+                                            <div class="clearfix"></div>
+                                            <form class="leave-rating">
+                                                <input type="radio" name="rating" id="rating-11" value="1" />
+                                                <label for="rating-11" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-12" value="2" />
+                                                <label for="rating-12" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-13" value="3" />
+                                                <label for="rating-13" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-14" value="4" />
+                                                <label for="rating-14" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-15" value="5" />
+                                                <label for="rating-15" class="fa fa-star"></label>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <!-- Subrating #3 -->
+                                    <div class="add-sub-rating">
+                                        <div class="sub-rating-title">Location <i class="tip" data-tip-content="Visibility, commute or nearby parking spots"></i></div>
+                                        <div class="sub-rating-stars">
+                                            <!-- Leave Rating -->
+                                            <div class="clearfix"></div>
+                                            <form class="leave-rating">
+                                                <input type="radio" name="rating" id="rating-21" value="1" />
+                                                <label for="rating-21" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-22" value="2" />
+                                                <label for="rating-22" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-23" value="3" />
+                                                <label for="rating-23" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-24" value="4" />
+                                                <label for="rating-24" class="fa fa-star"></label>
+                                                <input type="radio" name="rating" id="rating-25" value="5" />
+                                                <label for="rating-25" class="fa fa-star"></label>
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <!-- Subratings Container / End -->
+
+                                <!-- Review Comment -->
+                                <form id="add-comment" class="add-comment">
+                                    <fieldset>
+
+                                        <div>
+                                            <label>Review:</label>
+                                            <textarea cols="40" rows="3"></textarea>
+                                        </div>
+
+                                    </fieldset>
+
+                                    <button class="button">Submit Review</button>
+                                    <div class="clearfix"></div>
+                                </form>
+
+                            </div>
+                            <!-- Add Review Box / End -->
+                            <h4>Your Reviews</h4>
+                            <ul>
+
+                                <li>
+                                    <div class="comments listing-reviews">
+                                        <ul>
+                                            <li>
+                                                <div class="avatar"><img src="images/reviews-avatar.jpg" alt="" /> </div>
+                                                <div class="comment-content">
+                                                    <div class="arrow-comment"></div>
+                                                    <div class="comment-by">Your review
+                                                        <div class="comment-by-listing own-comment">on <a href="#">Poultry Farm</a></div> <span class="date">May 2019</span>
+                                                        <div class="star-rating" data-rating="4.5"></div>
+                                                    </div>
+                                                    <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris.</p>
+                                                    <a href="#add-review" class="rate-review popup-with-zoom-anim"><i class="sl sl-icon-note"></i> Edit</a>
+                                                </div>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="comments listing-reviews">
+                                        <ul>
+                                            <li>
+                                                <div class="avatar"><img src="images/reviews-avatar.jpg" alt="" /> </div>
+                                                <div class="comment-content">
+                                                    <div class="arrow-comment"></div>
+                                                    <div class="comment-by">Your review
+                                                        <div class="comment-by-listing own-comment">on <a href="#">Issac's Tomatoes</a></div> <span class="date">May 2019</span>
+                                                        <div class="star-rating" data-rating="5"></div>
+                                                    </div>
+                                                    <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris.</p>
+                                                    <a href="#add-review" class="rate-review popup-with-zoom-anim"><i class="sl sl-icon-note"></i> Edit</a>
+                                                </div>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Copyrights -->
+                    <div class="col-md-12">
+                        <div class="copyrights">© 2019 FarmNet. All Rights Reserved.</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Content / End -->
+
+
+        </div>
+        <!-- Dashboard / End -->
+
+
+    </div>
+    <!-- Wrapper / End -->
+
+
+    <!-- Scripts
+================================================== -->
+    <script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="scripts/mmenu.min.js"></script>
+    <script type="text/javascript" src="scripts/chosen.min.js"></script>
+    <script type="text/javascript" src="scripts/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/rangeslider.min.js"></script>
+    <script type="text/javascript" src="scripts/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="scripts/waypoints.min.js"></script>
+    <script type="text/javascript" src="scripts/counterup.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="scripts/tooltips.min.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
+
+
+</body>
+
+</html>
