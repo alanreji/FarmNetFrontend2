@@ -42,7 +42,7 @@ def invoice():
 
 @app.route("/listing")
 def listing():
-    return "listing"
+    return render_template("listing.html")
 
 
 @app.route("/item")
